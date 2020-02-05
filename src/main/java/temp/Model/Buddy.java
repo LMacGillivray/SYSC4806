@@ -1,5 +1,5 @@
 package temp.Model;
-
+/*
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -36,3 +36,4 @@ public class Buddy {
         this.phone = phoneNumber;
     }
 }
+*/

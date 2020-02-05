@@ -1,5 +1,5 @@
 package temp.com.example.accessingdatajpa;
-
+/*
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -39,4 +39,4 @@ public class BuddyInfo {
     public String getLastName() {
         return phoneNumber;
     }
-}
+}*/

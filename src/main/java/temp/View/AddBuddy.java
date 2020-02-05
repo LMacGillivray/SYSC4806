@@ -1,5 +1,5 @@
 package temp.View;
-
+/*
 import temp.Model.Buddy;
 
 import org.springframework.stereotype.Controller;
@@ -22,3 +22,4 @@ public class AddBuddy {
         return "results";
     }
 }
+*/

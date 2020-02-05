@@ -1,5 +1,5 @@
 package temp.Controller;
-
+/*
 import temp.Model.Buddy;
 
 import org.springframework.ui.Model;
@@ -84,8 +84,9 @@ public class Book {
 
     public String getStr() {
         return str;
-    }*/
+    }
 
 
 }
 
+*/
