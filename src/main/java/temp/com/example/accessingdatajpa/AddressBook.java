@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface AddressBook extends CrudRepository<BuddyInfo, Long> {
+public interface Book extends CrudRepository<Buddy, Long> {
 
-    List<BuddyInfo> findByPhoneNumber(String phoneNumber);
+    List<Buddy> findByPhoneNumber(String phoneNumber);
 
-    BuddyInfo findById(long id);
+    Buddy findById(long id);
 }*/

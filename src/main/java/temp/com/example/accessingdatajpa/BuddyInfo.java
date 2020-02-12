@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class BuddyInfo {
+public class Buddy {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -14,9 +14,9 @@ public class BuddyInfo {
     private String name;
     private String phoneNumber;
 
-    protected BuddyInfo() {}
+    protected Buddy() {}
 
-    public BuddyInfo(String name, String phoneNumber) {
+    public Buddy(String name, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
@@ -24,7 +24,7 @@ public class BuddyInfo {
     @Override
     public String toString() {
         return String.format(
-                "BuddyInfo[id=%d, name='%s', phoneNumber='%s']",
+                "Buddy[id=%d, name='%s', phoneNumber='%s']",
                 id, name, phoneNumber);
     }
 

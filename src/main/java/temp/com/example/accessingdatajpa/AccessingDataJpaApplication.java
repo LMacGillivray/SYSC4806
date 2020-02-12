@@ -17,36 +17,36 @@ public class AccessingDataJpaApplication {
     }
 
     @Bean
-    public CommandLineRunner demo(AddressBook repository) {
+    public CommandLineRunner demo(Book repository) {
         return (args) -> {
             // save a few customers
-            repository.save(new BuddyInfo("Jack Bauer", "(647) 121-2121"));
-            repository.save(new BuddyInfo("Chloe O'Brian", "(613) 123-4567"));
-            repository.save(new BuddyInfo("Kim Bauer", "(647) 121-2121"));
+            repository.save(new Buddy("Jack Bauer", "(647) 121-2121"));
+            repository.save(new Buddy("Chloe O'Brian", "(613) 123-4567"));
+            repository.save(new Buddy("Kim Bauer", "(647) 121-2121"));
 
 
             // fetch all customers
             log.info("Customers found with findAll():");
             log.info("-------------------------------");
-            for (BuddyInfo buddyInfo : repository.findAll()) {
+            for (Buddy buddyInfo : repository.findAll()) {
                 log.info(buddyInfo.toString());
             }
             log.info("");
 
             // fetch an individual buddyInfo by ID
-            BuddyInfo buddyInfo = repository.findById(1L);
-            log.info("BuddyInfo found with findById(1L):");
+            Buddy buddyInfo = repository.findById(1L);
+            log.info("Buddy found with findById(1L):");
             log.info("--------------------------------");
             log.info(buddyInfo.toString());
             log.info("");
 
             // fetch customers by last name
-            log.info("BuddyInfo found with findByPhoneNumber('(647) 121-2121'):");
+            log.info("Buddy found with findByPhoneNumber('(647) 121-2121'):");
             log.info("--------------------------------------------");
             repository.findByPhoneNumber("(647) 121-2121").forEach(bauer -> {
                 log.info(bauer.toString());
             });
-            // for (BuddyInfo bauer : repository.findByLastName("Bauer")) {
+            // for (Buddy bauer : repository.findByLastName("Bauer")) {
             //  log.info(bauer.toString());
             // }
             log.info("");
