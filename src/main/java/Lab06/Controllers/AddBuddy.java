@@ -18,9 +18,8 @@ public class AddBuddy {
     }
 
     @PostMapping("/addBuddy")
-    public String addBuddySubmit(@ModelAttribute Buddy buddy) {
-        book.addBuddies(buddy);
-        return "newBuddy";
+    public Newbud addBuddySubmit(@RequestParam String name, @RequestParam String phone) {
+        return new Newbud(name, phone);
     }
 
     @GetMapping("/addressBook")
